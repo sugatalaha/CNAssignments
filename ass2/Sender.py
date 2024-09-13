@@ -28,7 +28,7 @@ def channel(codeword):
     if random.randint(0,1):
         number_of_errors=random.randint(1,len(codeword))
     modified_codeword = insertError(codeword,number_of_errors)
-    interval = random.uniform(0, 2)
+    interval = random.uniform(0, 3)
     time.sleep(interval)
     return modified_codeword
 
