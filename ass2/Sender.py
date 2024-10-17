@@ -50,6 +50,7 @@ def wait_for_ack(client_socket,ret_list):
 def corrupted(frame):
     return int(mod2div(frame, divisor), 2) != 0
 
+time1=time.time()
 def send():
     sender_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
@@ -108,4 +109,7 @@ def send():
         sender_socket.close()
 
 if __name__ == "__main__":
+    time1=time.time()
     send()
+    time2=time.time()
+    print(f"Time of execution of stop and wait is {time2-time1}")

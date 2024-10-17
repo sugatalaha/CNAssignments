@@ -79,10 +79,12 @@ def send(m):
     finally:
         sender_socket.close()
 
-
 if __name__ == "__main__":
     m = int(input("Enter the parameter m: "))
+    time1=time.time()
     send(m)
+    time2=time.time()
+    print(f"Time of execution of Selective Repeat : {time2-time1}")
 
 
 
